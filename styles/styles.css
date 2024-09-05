@@ -1,0 +1,388 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500&display=swap');/* Add your CSS styles here */
+
+body {
+    font-family: "Manrope", sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+    height:auto;
+    width:100%;
+}
+
+.manrope-primary {
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.parallax {
+    /* The image used */
+    background-image: url("../images/headshot.jpg");
+  
+    /* Set a specific height */
+    min-height: 100vh;
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+
+#workProj h1 {
+    width:100%;
+    font-family: "Manrope", sans-serif;
+    padding: 20px 0;
+    color: #FBFFFE;
+    font-size: 50px;
+    background-color:#3772FF;
+    text-align: center;
+}
+
+#workProj{
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap:5vh;
+    background-color:#FBFFFE;
+    padding-bottom:20vh;
+}
+
+
+.text {
+    color: #31393C;
+    font-size:13px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    width:90%;
+    font-family:"Manrope", sans-serif;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.text span{
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.text p{
+    font-size: 10px;
+}
+
+
+
+.portfolioTab{
+    max-width: 400px;
+    min-width: 100px;
+    justify-content: center;
+    align-items: center;
+    overflow:hidden;
+    position: relative;
+}
+
+.portfolioContainer{
+    display:flex;
+    flex-wrap: wrap;
+    gap:15vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-image {
+    filter:grayscale(1);
+    transition: filter 1s;
+}
+
+.main-image:hover {
+    filter:grayscale(0);
+}
+
+.portfolioTab img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #FFC100; /* Semi-transparent background for overlay */
+    color: white;
+    overflow: hidden;
+    width: 100%;
+    height: 20%; /* Make the overlay cover the whole image */
+    opacity: 0; /* Hide the overlay by default */
+    transition: opacity 0.5s ease; /* Smooth transition for opacity */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.portfolioTab:hover .overlay {
+    opacity: 1; /* Show the overlay on hover */
+}
+
+p, li, a, button{
+    font-family: "Manrope", sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    color: #31393C;
+    font-size: 16px;
+}
+
+header p{
+    font-size: 18px;
+    font-family: "Manrope", sans-serif;
+    font-weight: 700;
+    color: #31393C;
+}
+
+ul {
+    list-style: none;
+}
+
+.flex-itemLeft {
+  flex: 1;          
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+}
+
+.flex-itemMid {
+  flex: 1;          
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.flex-itemRight {
+  flex: 1;          
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+ul.links {
+    display: flex;
+    column-gap: 35px;
+    align-items: center; /* Vertically center all items in the ul */
+}
+
+ul.links a {
+    color: #FFC100;
+}
+
+li.link-item {
+    display: flex;
+    align-items: center; /* Vertically center the link text */
+}
+
+#backgroundImg {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    filter:brightness(0.6)
+}
+
+.headerImg{
+    height: 5vh;
+    align-items: center;
+    top:0;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding: 10px 50px;
+    position:fixed;
+    top: 0;
+    left:0;
+    width: 100vw;
+    height: 7vh;
+    transition: all 0.5s;
+    z-index: 1000;
+}
+
+.footer{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 50px;
+    position:fixed;
+    bottom:0;
+    left:0;
+    width:100vw;
+    height: 7vh;
+    transition: all 0.5s;
+}
+
+.footer h3 {
+    color: #FFC100;
+    z-index: -10;
+}
+
+.logo {
+    height: 2vh;
+}
+
+.links {
+    display: flex;
+    column-gap: 10px;
+}
+
+
+.contact {
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    font-size: 10px;
+    line-height: 1;
+    border-radius: 300px;
+    transition-property: background-color,border-color,box-shadow,filter;
+    transition-duration: .3s;
+    border: 1px solid transparent;
+    letter-spacing: 2px;
+    min-width: 100px;
+    text-transform: uppercase;
+    white-space: normal;
+    font-weight: 700;
+    text-align: center;
+    padding: 0px;
+    color: #f2f2f2;
+    height: 36px;
+}
+.contact:hover{
+    background-color: #FFC100;
+}
+.links {
+    padding:0px;
+}
+
+.end-bar {
+    width: 100vw;
+    height: 20vh;
+    background-color: #3772FF; /* Blue color */
+    position: relative;
+    bottom: 0;
+    left: 0;
+    z-index: 100; /* Adjust this if necessary */
+}
+
+h2 {
+    font-family: "Manrope", sans-serif;
+}
+
+.aboutHolder{
+    display:flex;
+    gap:5vw;
+    position: relative;
+    margin-top: 6vh;
+    margin-left: 5vw;
+    margin-right:5vw;
+}
+
+h1 {
+    width:100%;
+    font-family: "Manrope", sans-serif;
+    padding: 20px 0;
+    color: #FBFFFE;
+    font-size: 50px;
+    background-color:#3772FF;
+    text-align: center;
+}
+
+.aboutimage {
+    width: 25vw;
+    height:25vw;
+    margin-top:0vh;
+}
+
+.aboutPadded{
+    margin-top: 8vh;
+    height: 13.5vh;
+
+}
+
+p {
+    font-family: "Manrope", sans-serif;
+}
+
+.about-end-bar {
+    width: 100vw;
+    height: 10vh;
+    background-color: #3772FF; /* Blue color */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 100; /* Adjust this if necessary */
+}
+
+.resumeHolder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2vh;
+    margin-bottom: 5vh;
+}
+
+.resumeImg {
+    width: 69.2vh;
+    height: 90vh;
+
+}
+
+.resume-end-bar {
+    width: 100vw;
+    height: 10vh;
+    background-color: #3772FF; /* Blue color */
+    position: relative;
+    bottom: 0;
+    left: 0;
+    z-index: 100; /* Adjust this if necessary */
+}
+
+.portfolioIMG {
+    margin-top: 7vh;
+    width:100vw;
+    height:100vh;
+}
+
+.endBar {
+    width: 100vw;
+    height:10vh;
+    background-color:#3772FF;
+    margin-top:5vh;
+
+}
+
+.textDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
