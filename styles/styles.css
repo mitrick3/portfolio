@@ -387,25 +387,18 @@ p {
     align-items: center;
 }
 
+.mobile-warning {
+  display: none; /* hide by default */
+}
+
 @media screen and (max-width: 768px) {
-    body > *:not(.mobile-warning) {
-      display: none !important; /* hide everything except warning */
-    }
-  
-    .mobile-warning {
-      display: flex !important;
-    }
-  }
-  
-  /* style the warning */
   .mobile-warning {
-    display: none;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    text-align: center;
-    font-size: 1.5rem;
-    padding: 1rem;
-    background:#f2f2f2;
-    color:#31393C;
+    display: flex; /* show only on small screens */
   }
+
+  /* don't need to hide everything else unless that's intentional */
+  body > *:not(.mobile-warning) {
+    display: none;
+  }
+}
+
