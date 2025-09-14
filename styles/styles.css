@@ -387,18 +387,3 @@ p {
     align-items: center;
 }
 
-.mobile-warning {
-  display: none; /* hide by default */
-}
-
-@media screen and (max-width: 768px) {
-  .mobile-warning {
-    display: flex; /* show only on small screens */
-  }
-
-  /* don't need to hide everything else unless that's intentional */
-  body > *:not(.mobile-warning) {
-    display: none;
-  }
-}
-
